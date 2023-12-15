@@ -1,0 +1,264 @@
+#J01:
+Write a Python script that takes input from the user and displays that input back in upper and lower cases
+
+str = input("Enter the String :")
+print(str.lower())
+print(str.upper())
+
+#S01:
+print characters from a string that are present at an even index number
+
+str = input("Enter your string: " )
+for i in str[::2]:
+    print(i)
+*****************************************************************************************************************************
+#S02
+Get the input from user
+
+Print the last letter
+
+Ex:
+Enter the string:Priya
+a
+
+str = input('Enter the string: ')
+string_length=len(str)
+print(str[string_length-1])
+****************************************************************************************************
+#03
+Input : str = "hello geeks for geeks 
+          is computer science portal" 
+        k = 4
+Output : hello geeks geeks computer 
+         science portal
+Explanation : The output is list of all 
+words that are of length more than k.
+
+program:
+--------
+str = "hello geeks for geeks  is computer science portal"
+str1 = str.split()
+for i in str1:
+    if(len(i)>6):
+      print(i,end=" ")
+*******************************************************************************************************
+#04
+Input : str =" geeks quiz practice code"
+Output : str = code practice quiz geeks  
+Input : str = "my name is laxmi"
+output : str= laxmi is name my
+
+program:
+str =" geeks quiz practice code"
+l1 = str.split()
+print(l1)
+l1.reverse()
+print(l1)
+print(' '.join(l1))
+
+str1 = "my name is laxmi"
+l2 = str1.split()
+print(l2)
+l2.reverse()
+print(' '.join(l2))
+
+************************************************************************************************
+#05
+Input: S = “zero four zero one”
+Output: 0401
+
+Input: S = “four zero one four”
+Output: 4014
+
+program:
+-------
+wr_num = {'zero':0,'one':1,'two':2,'three':3,'four':4,'five':5,'six':6,'sever':7,'eight':8,'nine':9}
+str = input('Enter your string')
+ls = str.split()
+for i in ls:
+ for word,num in wr_num.items():
+  if word == i:
+   print(num,end='')
+
+**************************************************************************************************
+
+#06
+Write a Python program to count the number of characters (character frequency) in a string.
+Sample String : google.com'
+Expected Result : {'g': 2, 'o': 3, 'l': 1, 'e': 1, '.': 1, 'c': 1, 'm': 1}
+
+program:
+string = 'google.com'
+
+# Initialize an empty dictionary to store character counts
+char_count = {}
+
+# Iterate through each character in the string
+for char in string:
+    # Use the get method to either increment the count or initialize it to 1
+    char_count[char] = char_count.get(char, 0) + 1
+
+# Print the result
+print(char_count)
+
+***********************************************************************************************
+
+#07
+Write a Python program to get a string made of the first 2 and last 2 characters of a given string. If the string length is less than 2, return the empty string instead.
+Sample String : 'w3resource'
+Expected Result : 'w3ce'
+Sample String : 'w3'
+Expected Result : 'w3w3'
+Sample String : ' w'
+Expected Result : Empty String
+
+
+program:
+
+str = 'w'
+str1 = str[0:2]
+str2 = str[-2::]
+str3 = str1+str2
+if (len(str3)>2):
+ print(str3)
+else:
+ print('Empty string')
+****************************************************************************************************************
+
+#05
+Write a Python program to get a string from a given string where all occurrences of its first char have been changed to '$', except the first char itself.
+Sample String : 'restart'
+Expected Result : 'resta$t'
+
+program:
+str = 'pipeline pocket'
+str1 =str[0]
+str2 = str[1:]
+str3 = str2.replace(str1,'$')
+str4 = str1 + str3
+print(str4)
+
+****************************************************************************************************
+
+#06
+Write a Python program to add 'ing' at the end of a given string (length should be at least 3). If the given string already ends with 'ing', add 'ly' instead. If the string length of the given string is less than 3, leave it unchanged.
+Sample String : 'abc'
+Expected Result : 'abcing'
+Sample String : 'string'
+Expected Result : 'stringly'
+
+program:
+
+str  = input('Enter your String: ')
+if((len(str)>=3)):
+    if(str[-3::]!='ing'):
+        print(str+'ing')
+    else:
+         print(str+'ly')
+else:
+    print('string length is less than 3')
+    
+***********************************************************************************************************
+#07
+Input : test_str = ‘boid’
+Output : doib
+Explanation : d replaced by b and vice-versa as being mirror images.
+
+Input : test_str = ‘gfg’ 
+Output : Not Possible 
+Explanation : Valid Mirror image not possible
+
+program:
+
+str = 'welcome'
+if((len(str)>=3)and(str[0] != str[-1])):
+    str1 = list(str)
+    str1[0],str1[-1] = str1[-1],str1[0]
+    str2 = ''.join(str1)
+    print(str2)
+else:
+    print('Not Possible')
+
+
+*********************************************************************************************************
+#08
+Write a Python program to set the indentation of the first line
+
+program:
+
+str = "priya"
+print("\t",str)
+
+***********************************************************************
+#09
+Write a Python function that takes a list of words and return the longest word 
+and the length of the longest one.
+
+Sample Output:
+Longest word: Exercises
+Length of the longest word: 9
+
+***********************************************************************************
+#10
+Python program to drop all digits from a string.
+
+program:
+
+str = "poetry92karate"
+character = ""#declare the empty string to append the characters
+for char in str:
+    if char.isalpha():
+        character += char
+print(character)
+
+*********************************************************************************************
+#11
+
+Python program to find sum of all numbers in a list.
+
+list = [10,20,40,25]
+print(sum(list))
+
+*********************************************************************************************
+#12
+
+Write a Python program to find those numbers which are divisible by 7 and multiples of 5, 
+between 1500 and 2700 (both included)
+
+program:
+
+for i in range(1500,2700):
+    if((i%7==0)and(i%5==0)):
+     print(i,end=',')
+
+************************************************************************************************************
+#13
+Write a Python program that accepts a word from the user and reverses it.
+
+program:
+str = input('Enter your string: ')
+print(str[::-1])
+
+************************************************************************************************************
+#14
+
+Write a Python program to count the number of even and odd numbers in a series of numbers
+Sample numbers : numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9) 
+Expected Output :
+Number of even numbers : 5
+Number of odd numbers : 4
+
+program:
+
+list = [1,2,3,4,5,6,7,8,9]
+even = 0
+odd = 0
+for num in list:
+    if (num%2==0):
+        even += 1
+    else:
+        odd += 1
+print("Number of even numbers: ",even)
+print("Number of odd numbers: ",odd)
+
+******************************************************************************************************
