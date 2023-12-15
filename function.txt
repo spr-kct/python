@@ -1,0 +1,239 @@
+1.Write a Python function to find the maximum of three numbers.
+
+def numbers(a,b,c):
+    if ((a>b)&(a>c)):
+        print(a)
+    elif ((b>a)&(b>c)):
+        print(b)
+    else:
+        print(c)
+numbers(61,3,10)
+
+**********************************************************************************************************************
+
+2. Write a Python function to sum all the numbers in a list.
+Sample List : (8, 2, 3, 0, 7)
+Expected Output : 20
+
+def sum_all(numbers):
+     result = 0
+     for i in numbers:
+        result += i
+     return result
+Sample_List = (8, 2, 3, 0, 7)
+result = sum_all(Sample_List)
+print(result)
+
+
+***************************************************************************************************
+3. Write a Python function to multiply all the numbers in a list.
+Sample List : (8, 2, 3, -1, 7)
+Expected Output : -336
+
+def mul_num(numbers):
+    multiply = 1
+    for i in numbers:
+        multiply *= i
+    return multiply
+sample_list = (8, 2, 3, -1, 7)
+result = mul_num(sample_list)
+print(result)
+
+********************************************************************************************
+
+4. Write a Python program to reverse a string.
+Sample String : "1234abcd"
+Expected Output : "dcba4321"
+
+
+string = "1234abcd"
+print(string[::-1])
+
+**************************************************************************************
+
+5. Define a python function that accepts two values, 
+and returns it sum subtraction and multiplication.
+
+input
+Enter value of a = 7 
+Enter value of b = 5
+
+Expected output 
+
+Sum is = 12
+Sub is = 2
+Multiplication is = 35
+
+program:
+========
+def math():
+    a = int(input("Enter value of a = "))
+    b = int(input("Enter value of b = "))
+    print("Sum is =", a+b) 
+    print("Sub is =", a-b)
+    print("Multiplication is =", a*b)
+math()
+
+*******************************************************************************************
+
+Define a function that accepts roll number and returns whether the student is present or absent.
+
+Hint:
+use a list to store sample roll.no.
+get input from the a user and check if the number exist in the list or not,
+if exists return present else return absent.
+
+program:
+
+roll_no = [1,2,3,4,5,6,7,8,9,10]
+
+def attendence():
+    num = int(input("Enter the roll number: "))
+    if num in roll_no:
+        print("Roll no",num, "is present")
+    else:
+        print("Roll no",num, "is absent")
+attendence()
+
+**********************************************************************************
+
+Define a function that accepts a number and returns whether the number is even or odd.
+
+Hint
+====
+input:
+Enter a number = 4
+Expected output
+===============
+4 is an even number 
+
+program:
+========
+
+def finding_odd_or_even():
+    number = int(input("Enter a nunmber:"))
+    even = number%2
+    if even == 0:
+        return print(number,"is an even number")
+    else:
+        return print(number,"is an odd number")
+finding_odd_or_even()
+
+*********************************************************************************************
+
+Define a function which counts vowels and consonant in a word.
+
+program:
+========
+def counting(word, vowel=["a","e","i","o","u"]):
+    vow_count = 0
+    cons_count = 0
+    for i in word:
+        if i in vowel:
+            vow_count += 1
+        else:
+            cons_count += 1
+    return vow_count, cons_count     
+string = input("Enter a word: ")
+result, result1= counting(string)
+print("Count of vowel is = ", result)
+print("Count of consonants = ", result1)
+
+
+*****************************************************************************************
+
+Define a function that returns the factorial of a number
+
+program
+=========
+
+def cal_fact(given_number):
+    calculate_fact = 1
+    for i in range(given_number,1, -1):
+        calculate_fact *= i
+    return calculate_fact
+number = int(input("Enter the number : "))
+result = cal_fact(number)
+print("The factorial of a given number is", result)
+
+****************************************************************************************
+
+Define a function that accepts the lowercase words and returns uppercase words.
+
+program
+=======
+
+def upper_lower(str1):
+    return str1
+string = input("Enter a word: ")   
+result = upper_lower(string).upper()
+print("Result is = ", result)
+
+*********************************************************************************************
+
+define a function that accepts radius and returns the area of a circle
+
+program
+========
+
+def circle_area(r,pi=3.14):
+    area_of_circle = pi*r*r
+    return area_of_circle
+radius = int(input("Enter the radius :"))
+result = circle_area(radius)
+print("The area of circle is ", result)
+
+*************************************************************************************
+
+Write a function called km_to_miles that takes kilometer as a parameter, converts it into miles
+and returns the result.
+
+program
+=======
+def km_to_miles(km,default=0.621371):
+    km_to_mile = km * default
+    return round(km_to_mile,2)
+print("the result of the given km into miles", km_to_miles(1))
+
+*******************************************************************************************
+
+write a function called is_divisable_by_11 that takes an integer as an parameter and returns whether
+it is divisible by 11 or not.
+
+program:
+
+def is_divisable_by_11(number):
+    if (number%11 == 0):
+        return print("the given number is divisible by 11")
+    else:
+        return print("the given number is not divisible by 11")
+is_divisable_by_11(22)
+
+******************************************************************************************
+Write a function called hexagon_area that takes the length of a side of a regular heaxagon 
+as a parameter and returns the area of the hexagon.
+
+program:
+========
+def hexagon_area(side):
+    A = (((3*pow(3,(1/2)))))/2*(pow(side,2))
+    return print("The area of the hexagon for the given side length", round(A,2))
+hexagon_area(2) 
+
+
+import math
+def hexagon_area(side):
+    A = ((3*math.sqrt(3))/2*math.pow(side,2))
+    return print("The area of the hexagon for the given side length", round(A,2))
+hexagon_area(3)
+
+
+************************************************************************
+Write a function called sleeps_untill_xmas that calculates how many days it is untill the 
+chritmas and returns the number of sleeps untill the big day.
+
+
+
+
+
+
